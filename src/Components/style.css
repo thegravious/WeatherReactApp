@@ -1,0 +1,192 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 95vh;
+    font-family: 'Roboto', sans-serif; /* Using Roboto for body text */
+    background: linear-gradient(180deg, #87ceeb 0%, #ffffff 100%); /* Sky blue to white gradient background */
+    color: #2180a8; /* Dark gray for text */
+}
+
+.hero {
+    text-align: center; /* Center align hero text */
+    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-family: 'Bungee Inline', cursive; /* Bungee font for headings */
+    font-size: 4rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adding shadow to text */
+}
+
+#city {
+    font-family: 'Bungee Inline', cursive; /* Bungee font for headings */
+    font-size: 3rem;
+    color: #2180a8;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adding shadow to text */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    opacity: 0.8; /* Slightly faded description */
+}
+
+.container {
+    margin-top: 30px;
+    display: flex; /* Use flexbox to center align items */
+    flex-direction: column; /* Align items in a column */
+    align-items: center; /* Center align items */
+}
+
+.input-group {
+    margin-bottom: 30px; /* Space below input */
+    width: 100%;
+    max-width: 1000px; /* Max width to avoid stretching */
+}
+
+.input-group input {
+    border-radius: 10px 0 0 10px;
+    border: 2px solid #2180a8; /* Sky blue border for input */
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for input */
+    color: #333333; /* Dark text for input */
+}
+
+.input-group input::placeholder {
+    color: #2180a8; /* Placeholder color */
+}
+
+.input-group button {
+    border-radius: 0 10px 10px 0;
+    background-color: #2180a8; /* Sky blue button */
+    color: #ffffff; /* White text */
+    border: none; /* Remove border */
+    transition: background-color 0.3s, transform 0.3s; /* Button hover effect */
+}
+
+.input-group button:hover {
+    background-color: #6db3e2; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight grow effect */
+}
+
+.weather-card {
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent card background */
+    color: #333333; /* Dark text color */
+    transition: transform 0.3s; /* Smooth hover effect */
+    padding: 20px; /* Add padding */
+    text-align: center; /* Center align text inside weather card */
+}
+
+.weather-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.weather-card p {
+    font-size: 1.2rem;
+    margin: 10px 0; /* Space above and below paragraphs */
+    display: flex; /* Use flex for icon and text */
+    align-items: center; /* Center icon and text vertically */
+    justify-content: center; /* Center align icon and text horizontally */
+}
+
+.icon {
+    font-size: 2rem; /* Larger icon size */
+    margin-right: 10px; /* Space between icon and text */
+    color: #2180a8; /* Sky blue for icons */
+}
+
+.tempC, .tempF, .weather, .sunrise-sunset, .wind-speed {
+    color: #87ceeb; /* Consistent color for all result texts */
+    font-weight: bold; /* Make it bold */
+}
+
+.sunrise-sunset {
+    color: #2180a8; /* Match sunrise/sunset icons with other icons */
+}
+
+.wind-speed {
+    color: #2180a8; /* Match wind speed color with others */
+}
+
+.text-blue {
+    color: #2180a8;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+    font-size: 0.9rem;
+    opacity: 0.8; /* Slightly faded footer */
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #city {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .weather-card p {
+        font-size: 1rem;
+    }
+
+    .input-group input, .input-group button {
+        font-size: 1rem;
+    }
+
+    .container {
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+
+    .input-group input {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    #city {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.4rem;
+    }
+
+    .weather-card p {
+        font-size: 1.1rem;
+    }
+
+    .input-group input, .input-group button {
+        font-size: 1.1rem;
+    }
+
+    .container {
+        margin-top: 50px;
+    }
+
+    .input-group input {
+        width: 250px;
+    }
+}
